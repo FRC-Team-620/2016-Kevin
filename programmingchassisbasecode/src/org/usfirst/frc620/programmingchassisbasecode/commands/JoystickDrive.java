@@ -66,6 +66,11 @@ public class JoystickDrive extends Command {
     		if(stick.getRawButton(3)){
         		RobotMap.dsolenoid.set(DoubleSolenoid.Value.kOff);
        		}
+    		if(stick.getRawButton(4)){
+    			RobotMap.c.setClosedLoopControl(true);
+    		}else{
+    			RobotMap.c.setClosedLoopControl(false);
+    		}
     		
     	} else {
     		x = stick.getX();
