@@ -20,6 +20,14 @@ import org.usfirst.frc620.Kevin.Robot;
  */
 public class DriveWithJoystick extends Command {
 	
+	/*
+	 * Determines which control system the robot uses
+	 * 0 for double-joystick tank drive
+	 * 1 for single xbox control tank drive
+	 */
+	public static short CONTROL_MODE = 1;
+	
+	
 	double[][] axisValues;
 	boolean[][] buttonPrints;
 	int clock = 0;
@@ -58,27 +66,36 @@ public class DriveWithJoystick extends Command {
     }
 
     protected void drive() {
-    	System.out.println("line");
-//    	double x,y;
-//    	if(xbox) {
-//    		y = stickLeft.getRawAxis(0);
-//    		x = stickLeft.getRawAxis(1);
-//    	} else {
-//    		x = stickLeft.getX();
-//    		y = stickLeft.getY();
-//    	}
+    	if(CONTROL_MODE == 0) {
+    		
+    		double left = 0, right = 0;
+	    	
+	    	left = stickLeft.getY();
+	    	right = stickRight.getY();
+	    	
+	    	if(Math.abs(left)<0.2)
+	    		left=0;
+	    	if(Math.abs(right)<0.2)
+	    		right=0;
+	    	
+	    	double throttle = (stickLeft.getRawAxis(2)-2)/-3;
+	    	
+	    	Robot.driveTrain.tankDrive(left*throttle, right*throttle);
+	    	
+    	} else if(CONTROL_MODE == 1) {
+    		
+    		double left = 0, right = 0;    		
+    		left = stickLeft.getRawAxis(1);
+    		right = stickLeft.getRawAxis(5);
+    		
+    		if(Math.abs(left)<0.2)
+	    		left=0;
+	    	if(Math.abs(right)<0.2)
+	    		right=0;
+	    	
+	    	Robot.driveTrain.tankDrive(left,right);
+    	}
     	
-    	double left = 0, right = 0;
-    	
-    	left = stickLeft.getY();
-    	right = stickRight.getY();
-    	
-    	if(Math.abs(left)<0.2)
-    		left=0;
-    	if(Math.abs(right)<0.2)
-    		right=0;
-    	double throttle = stickLeft.getRawAxis(2);
-    	Robot.driveTrain.tankDrive(left*throttle, right*throttle);
     }
     
     public void mapStick(Joystick stick, int num) {
