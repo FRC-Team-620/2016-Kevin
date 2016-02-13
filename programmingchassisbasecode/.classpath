@@ -6,5 +6,9 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="lib" path="C:/Users/Team A/wpilib/java/current/lib/WPILib.jar" sourcepath="C:/Users/Team A/wpilib/java/current/javadoc"/>
 	<classpathentry kind="lib" path="C:/Users/Team B/wpilib/java/current/lib/WPILib.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lizwe/wpilib/java/current/lib/NetworkTables.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lizwe/wpilib/java/current/lib/NetworkTables-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lizwe/wpilib/java/current/lib/WPILib.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lizwe/wpilib/java/current/lib/WPILib-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
