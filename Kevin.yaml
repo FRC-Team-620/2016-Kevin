@@ -223,16 +223,18 @@ Children:
         default: []
         name: Default command parameters
         validators: null
-        value: []
+        value:
+        - !!robotbuilder.data.properties.ValuedParameterDescriptor {name: state, type: boolean,
+          value: 'false'}
       Default Command: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
-        name: Default Command, type: Command, validators: null, value: None}
+        name: Default Command, type: Command, validators: null, value: Lift}
       Constants: !!robotbuilder.data.properties.ConstantsProperty
         default: []
         name: Constants
         validators: null
         value: *id005
     Base: Subsystem
-    Name: 'Lifter '
+    Name: Lifter
   - Children:
     - Children: []
       Properties:
@@ -427,7 +429,7 @@ Children:
         value:
         - !!robotbuilder.data.properties.ParameterDescriptor {name: state, type: boolean}
       Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
-        name: Requires, type: Subsystem, validators: null, value: 'Lifter '}
+        name: Requires, type: Subsystem, validators: null, value: None}
       Parameter presets: !!robotbuilder.data.properties.ParameterSetProperty
         default: []
         name: Parameter presets
