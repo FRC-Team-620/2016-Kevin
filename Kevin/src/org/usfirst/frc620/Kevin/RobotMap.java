@@ -36,7 +36,7 @@ public class RobotMap {
     public static CANTalon driveTrainRightFront;
     public static CANTalon driveTrainRightBack;
     public static RobotDrive driveTrainRobotDrive;
-    public static SpeedController bucketWindowMotor;
+    public static CANTalon bucketCANTalon;
     public static DigitalInput bucketLimitUpper;
     public static DigitalInput bucketLimitLower;
     public static DoubleSolenoid lifterDoubleSolenoid1;
