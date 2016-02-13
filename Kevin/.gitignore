@@ -1,5 +1,8 @@
 /bin/
 /dist/
 
+.class
+.jar
+
 #to remove tilde files
 *~
