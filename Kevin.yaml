@@ -312,7 +312,7 @@ Children:
           name: Command
           type: Command
           validators: &id016 [TypeDropdownSelected]
-          value: 'Drive With Joystick '
+          value: Drive With Joystick
         When to Run: !!robotbuilder.data.properties.ChoicesProperty
           choices: &id017 [whileHeld, whenPressed, whenReleased]
           default: whileHeld
@@ -351,7 +351,7 @@ Children:
           name: Command
           type: Command
           validators: *id016
-          value: 'Drive With Joystick '
+          value: Drive With Joystick
         When to Run: !!robotbuilder.data.properties.ChoicesProperty
           choices: *id017
           default: whileHeld
@@ -462,12 +462,12 @@ Children:
       Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
         name: Button on SmartDashboard, validators: null, value: true}
     Base: Command
-    Name: 'Drive With Joystick '
+    Name: Drive With Joystick
   Properties: {}
   Base: Commands
   Name: Commands
 Properties:
-  Eclipse Workspace: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\robots\workspace',
+  Eclipse Workspace: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\mkadonoff\workspace',
     extension: null, folder: true, name: Eclipse Workspace, validators: null, value: .\}
   Export Commands: !!robotbuilder.data.properties.BooleanProperty {default: true,
     name: Export Commands, validators: null, value: true}
@@ -486,7 +486,7 @@ Properties:
     name: Export Subsystems, validators: null, value: true}
   Simulation World File: !!robotbuilder.data.properties.StringProperty {default: /usr/share/frcsim/worlds/GearsBotDemo.world,
     name: Simulation World File, validators: null, value: /usr/share/frcsim/worlds/GearsBotDemo.world}
-  Wiring file location: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\robots\',
+  Wiring file location: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\mkadonoff\',
     extension: null, folder: true, name: Wiring file location, validators: null, value: ..\}
   Autonomous Command: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
     name: Autonomous Command, type: Command, validators: null, value: Autonomous Command}
