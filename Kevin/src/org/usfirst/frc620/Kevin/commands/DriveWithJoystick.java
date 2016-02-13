@@ -64,6 +64,24 @@ public class DriveWithJoystick extends Command {
     	buttonPrints[0] = new boolean[stickLeft.getButtonCount()];
     	buttonPrints[1] = new boolean[stickRight.getButtonCount()];
     	
+    	if(stickLeft.getName().trim().toLowerCase().equals("XBOX 360 For Windows (Controller)".trim().toLowerCase())) {
+    		CONTROL_MODE = 1;
+    		System.out.println("Left controller is XBox.");
+    	}
+    	else if(stickLeft.getName().trim().toLowerCase().equals("Logitech Attack 3".trim().toLowerCase())) {
+    		CONTROL_MODE = 0;
+    		System.out.println("Left controller is Joystick.");
+    	}
+    	else
+    		System.out.println("Left Control " + stickLeft.getName() + " is not useable.");
+    	
+    	if(stickRight.getName().trim().toLowerCase().equals("XBOX 360 For Windows (Controller)".trim().toLowerCase()))
+    		System.out.println("Right controller is XBox.");
+    	else if(stickRight.getName().trim().toLowerCase().equals("Logitech Attack 3".trim().toLowerCase()))
+    		System.out.println("Right controller is Joystick.");
+    	else
+    		System.out.println("Right control " + stickRight.getName() + " is not useable.");
+    	
     }
 
     protected void drive() {
