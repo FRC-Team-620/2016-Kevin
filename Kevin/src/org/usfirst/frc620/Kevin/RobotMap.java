@@ -77,10 +77,10 @@ public class RobotMap {
         LiveWindow.addSensor("Bucket", "Limit Lower", bucketLimitLower);
         
         lifterDoubleSolenoid1 = new DoubleSolenoid(0, 0, 1);
-        LiveWindow.addActuator("Lifter ", "Double Solenoid 1", lifterDoubleSolenoid1);
+        LiveWindow.addActuator("Lifter", "Double Solenoid 1", lifterDoubleSolenoid1);
         
         lifterDoubleSolenoid2 = new DoubleSolenoid(0, 2, 3);
-        LiveWindow.addActuator("Lifter ", "Double Solenoid 2", lifterDoubleSolenoid2);
+        LiveWindow.addActuator("Lifter", "Double Solenoid 2", lifterDoubleSolenoid2);
         
         lidarUltrasonic1 = new Ultrasonic(2, 3);
         LiveWindow.addSensor("Lidar", "Ultrasonic 1", lidarUltrasonic1);
