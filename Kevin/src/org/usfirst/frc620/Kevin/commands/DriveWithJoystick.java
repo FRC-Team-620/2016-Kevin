@@ -101,16 +101,29 @@ public class DriveWithJoystick extends Command {
 	    	left = stickLeft.getY();
 	    	right = stickRight.getY();
 	    	
-	    	if(!leftTrigger && stickLeft.getRawButton(3)) {
+	    	boolean upb, dnb;
+	    	
+	    	if(stickLeft.getRawButton(1)) {
+	    		upb = stickLeft.getRawButton(5);
+	    		dnb = stickLeft.getRawButton(4);
+	    	} else if(stickRight.getRawButton(1)) {
+	    		upb = stickRight.getRawButton(5);
+	    		dnb = stickRight.getRawButton(4);
+	    	} else {
+	    		upb = stickLeft.getRawButton(3);
+	    		dnb = stickRight.getRawButton(3);
+	    	}
+	    	
+	    	if(!leftTrigger && upb) {
     			mode++;
     			mode = Math.min(mode, 1);
     		}
-    		if(!rightTrigger && stickRight.getRawButton(3)) {
+    		if(!rightTrigger && dnb) {
     			mode--;
     			mode = Math.max(mode, -1);
     		}
-    		leftTrigger = stickLeft.getRawButton(3);
-    		rightTrigger = stickRight.getRawButton(3);
+    		leftTrigger = upb;
+    		rightTrigger = dnb;
     		
     		if(mode == 1)
     			throttle = 1.0 * ((stickLeft.getRawAxis(2)-2)/-3);
@@ -158,16 +171,20 @@ public class DriveWithJoystick extends Command {
     			
     			straight = true;
     		}
+    		
+    		left = right = Math.max(left, right);
+    		
     	} else
     		straight = false;
-    	/*if (left > 0)
+    	
+    	if (left > 0)
     		left = Math.pow(left, 2);
     	else
     		left = -Math.pow(left, 2);
     	if (right > 0)
     		right = Math.pow(right, 2);
     	else
-    		right = -Math.pow(right, 2);*/
+    		right = -Math.pow(right, 2);
     	
     	if(CONTROL_MODE == 0 && stickLeft.getRawButton(1)) {
     		Robot.driveTrain.arcadeDrive(stickLeft.getY() * throttle, stickLeft.getX()*-throttle);
