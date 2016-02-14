@@ -36,7 +36,7 @@ public class RobotMap {
     public static RobotDrive driveTrainRobotDrive;
     public static DigitalInput bucketLimitUpper;
     public static DigitalInput bucketLimitLower;
-    public static CANTalon bucketWindowMotor;
+    public static CANTalon bucketCANTalonMotor;
     public static DoubleSolenoid lifterDoubleSolenoid1;
     public static DoubleSolenoid lifterDoubleSolenoid2;
     public static Ultrasonic lidarUltrasonic1;
@@ -71,8 +71,8 @@ public class RobotMap {
         bucketLimitLower = new DigitalInput(1);
         LiveWindow.addSensor("Bucket", "Limit Lower", bucketLimitLower);
         
-        bucketWindowMotor = new CANTalon(5);
-        LiveWindow.addActuator("Bucket", "Window Motor", bucketWindowMotor);
+        bucketCANTalonMotor = new CANTalon(5);
+        LiveWindow.addActuator("Bucket", "Window Motor", bucketCANTalonMotor);
         
         lifterDoubleSolenoid1 = new DoubleSolenoid(0, 0, 1);
         LiveWindow.addActuator("Lifter", "Double Solenoid 1", lifterDoubleSolenoid1);
