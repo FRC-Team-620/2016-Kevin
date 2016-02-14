@@ -54,5 +54,9 @@ public class DriveTrain extends Subsystem {
     public void tankDrive(double left, double right) {
     	robotDrive.tankDrive(left, right);
     }
+    
+    public void arcadeDrive(double speed, double turn) {
+    	robotDrive.arcadeDrive(speed, turn);
+    }
 }
 
