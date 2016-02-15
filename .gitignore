@@ -13,6 +13,8 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+# ClassPath
+.classpath
 
 # Windows shortcuts
 *.lnk
