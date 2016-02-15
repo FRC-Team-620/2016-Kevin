@@ -52,3 +52,4 @@ Temporary Items
 #to get rid of tilde files
 *~
 Kevin/.classpath
+*.class
