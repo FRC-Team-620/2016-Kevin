@@ -9,14 +9,14 @@
 // it from being updated in the future.
 
 
-package org.usfirst.frc620.Kevin;
+package src.org.usfirst.frc620.Kevin;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-import org.usfirst.frc620.Kevin.commands.*;
-import org.usfirst.frc620.Kevin.subsystems.*;
+import src.org.usfirst.frc620.Kevin.commands.*;
+import src.org.usfirst.frc620.Kevin.subsystems.*;
 
 /**
  * The VM is configured to automatically run this class, and to call the

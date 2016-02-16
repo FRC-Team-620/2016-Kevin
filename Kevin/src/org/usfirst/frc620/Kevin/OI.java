@@ -9,13 +9,13 @@
 // it from being updated in the future.
 
 
-package org.usfirst.frc620.Kevin;
+package src.org.usfirst.frc620.Kevin;
 
-import org.usfirst.frc620.Kevin.commands.*;
+import src.org.usfirst.frc620.Kevin.commands.*;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.*;
-import org.usfirst.frc620.Kevin.subsystems.*;
+import src.org.usfirst.frc620.Kevin.subsystems.*;
 
 
 /**
