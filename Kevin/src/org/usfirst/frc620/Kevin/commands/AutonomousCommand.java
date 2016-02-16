@@ -8,10 +8,10 @@
 // update. Deleting the comments indicating the section will prevent
 // it from being updated in the future.
 
-package src.org.usfirst.frc620.Kevin.commands;
+package org.usfirst.frc620.Kevin.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
-import src.org.usfirst.frc620.Kevin.Robot;
+import org.usfirst.frc620.Kevin.Robot;
 
 public class AutonomousCommand extends Command {
 
