@@ -8,16 +8,15 @@
 // update. Deleting the comments indicating the section will prevent
 // it from being updated in the future.
 
-package org.usfirst.frc620.Kevin;
-
-import org.usfirst.frc620.Kevin.commands.AutonomousCommand;
-import org.usfirst.frc620.Kevin.commands.ClearFault;
-import org.usfirst.frc620.Kevin.commands.DriveWithJoystick;
-import org.usfirst.frc620.Kevin.commands.Lift;
-import org.usfirst.frc620.Kevin.commands.Rotate;
+package src.org.usfirst.frc620.Kevin;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import src.org.usfirst.frc620.Kevin.commands.AutonomousCommand;
+import src.org.usfirst.frc620.Kevin.commands.ClearFault;
+import src.org.usfirst.frc620.Kevin.commands.DriveWithJoystick;
+import src.org.usfirst.frc620.Kevin.commands.Lift;
+import src.org.usfirst.frc620.Kevin.commands.Rotate;
 
 /**
  * This class is the glue that binds the controls on the physical operator

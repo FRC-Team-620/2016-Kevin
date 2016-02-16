@@ -8,14 +8,20 @@
 // update. Deleting the comments indicating the section will prevent
 // it from being updated in the future.
 
-package org.usfirst.frc620.Kevin;
+package src.org.usfirst.frc620.Kevin;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-import org.usfirst.frc620.Kevin.commands.*;
-import org.usfirst.frc620.Kevin.subsystems.*;
+import src.org.usfirst.frc620.Kevin.commands.AutonomousCommand;
+import src.org.usfirst.frc620.Kevin.commands.DriveWithJoystick;
+import src.org.usfirst.frc620.Kevin.subsystems.Bucket;
+import src.org.usfirst.frc620.Kevin.subsystems.DriveTrain;
+import src.org.usfirst.frc620.Kevin.subsystems.Lidar;
+import src.org.usfirst.frc620.Kevin.subsystems.Lifter;
+import src.org.usfirst.frc620.Kevin.subsystems.Navx;
+import src.org.usfirst.frc620.Kevin.subsystems.PowerBus;
 
 /**
  * The VM is configured to automatically run this class, and to call the

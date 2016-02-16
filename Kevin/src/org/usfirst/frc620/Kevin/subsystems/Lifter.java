@@ -8,13 +8,11 @@
 // update. Deleting the comments indicating the section will prevent
 // it from being updated in the future.
 
-package org.usfirst.frc620.Kevin.subsystems;
+package src.org.usfirst.frc620.Kevin.subsystems;
 
-import org.usfirst.frc620.Kevin.RobotMap;
-import org.usfirst.frc620.Kevin.commands.*;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
-
 import edu.wpi.first.wpilibj.command.Subsystem;
+import src.org.usfirst.frc620.Kevin.RobotMap;
 
 public class Lifter extends Subsystem {
 
