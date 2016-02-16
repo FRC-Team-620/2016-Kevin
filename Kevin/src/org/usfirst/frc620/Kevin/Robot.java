@@ -8,7 +8,6 @@
 // update. Deleting the comments indicating the section will prevent
 // it from being updated in the future.
 
-
 package src.org.usfirst.frc620.Kevin;
 
 import edu.wpi.first.wpilibj.IterativeRobot;

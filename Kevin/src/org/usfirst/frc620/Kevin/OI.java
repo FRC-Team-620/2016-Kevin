@@ -8,15 +8,11 @@
 // update. Deleting the comments indicating the section will prevent
 // it from being updated in the future.
 
-
 package src.org.usfirst.frc620.Kevin;
 
 import src.org.usfirst.frc620.Kevin.commands.*;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.buttons.*;
-import src.org.usfirst.frc620.Kevin.subsystems.*;
-
 
 /**
  * This class is the glue that binds the controls on the physical operator
