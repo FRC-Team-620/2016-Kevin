@@ -226,6 +226,14 @@ public class DriveWithJoystick extends Command {
 			throttle = 0.5;
 		}
 		
+		if((barrierMode & 6) == 6) {
+			if((barrierMode & 1) == 1) {
+				//TODO Setup barrier mode
+			} else {
+				//TODO Take down barrier mode
+			}
+		}
+		
     	if(CONTROL_MODE == 0 && stickLeft.getRawButton(1)) {
     		Robot.driveTrain.arcadeDrive(stickLeft.getY() * throttle, stickLeft.getX()*-throttle);
     	} else if (CONTROL_MODE == 0 && stickRight.getRawButton(1)) {
