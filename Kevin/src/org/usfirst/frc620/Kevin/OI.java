@@ -64,7 +64,7 @@ public class OI {
 
 
         // SmartDashboard Buttons
-        SmartDashboard.putData("Autonomous Command", new AutonomousCommand());
+        SmartDashboard.putData("Autonomous Command", new AutonomousCommand(0,false,false,0)); //TODO Enter values for auto
         SmartDashboard.putData("Rotate: up", new Rotate(true));
         SmartDashboard.putData("Rotate: down", new Rotate(false));
         SmartDashboard.putData("Lift: extended", new Lift(true));

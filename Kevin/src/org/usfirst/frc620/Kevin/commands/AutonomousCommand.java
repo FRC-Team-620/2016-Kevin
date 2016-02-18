@@ -1,12 +1,14 @@
-package org.usfirst.frc620.programmingchassisbasecode;
+package src.org.usfirst.frc620.Kevin.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
+import src.org.usfirst.frc620.Kevin.Robot;
 
 public class AutonomousCommand extends Command {
+	//replace speed with another value after testing
 int speed = 10;
-//replace speed with another value after testing
-int turn = 90;
 //replace turn with another value after testing
+int turn = 90;
+
 	@Override
 	protected void end() {
 		// TODO Auto-generated method stub
@@ -36,103 +38,103 @@ int turn = 90;
 		// TODO Auto-generated method stub
 		return false;
 	}
-	protected AutonomousCommand(int barrier, boolean draw, boolean port, int lane){
+	public AutonomousCommand(int barrier, boolean draw, boolean port, int lane){
 		//First go through the barrier
 		if (barrier == 1){
-			Portcullis();
+			portcullis();
 		}
 		if (barrier == 2){
-			ChevaldeFrise();
+			chevaldeFrise();
 		}
 		if (barrier == 3){
-			Moat();
+			moat();
 		}
 		if (barrier == 4){
-			Ramparts();
+			ramparts();
 		}
 		if (barrier == 5){
 			rockwall();
 		}
 		if (barrier == 6){
-			roughterrain();
+			roughTerrain();
 		}
 		if (barrier == 7){
 			lowbar();
 		}
 		//next, if the box is checked, go around and open a barrier from behind
-		if (draw){
+		if (draw) {
 			drawbridge();
 		}
-		else if (port){
+		else if (port) {
 			sallyport();
 		}
 		//if neither box was checked, then rotate towards the tower
 		else {
-			rotatetowardstower(lane);
+			rotateTowardsTower(lane);
 		}
 	}
-	protected void Portcullis() {
+	protected void portcullis() {
 		 //Open door with arm
 		
 		//Go through
-		Robot.drivetrain.tankDrive(speed, 0);
+		Robot.driveTrain.tankDrive(speed, 0);
 		
 	}
-	protected void  ChevaldeFrise(){
+	protected void  chevaldeFrise(){
 		//Pull piece down
 		
 		//Go over
-		Robot.drivetrain.tankDrive(speed, 0);
+		Robot.driveTrain.tankDrive(speed, 0);
 	}
-	protected void Moat() {
+	protected void moat() {
 		//If the tank tread power mode thing is on the robot, trigger it
 		//Brute force charge
-		Robot.drivetrain.tankDrive(speed, 0);
+		Robot.driveTrain.tankDrive(speed, 0);
 	}
-	protected void Ramparts() {
+	protected void ramparts() {
 		//Careful-speed
-		Robot.drivetrain.tankDrive(speed/2, 0);
+		Robot.driveTrain.tankDrive(speed/2, 0);
 		//High torque
 		//Charge forward
 		//On wheel hit ramp, start focusing more power into torque
 	}
 	protected void drawbridge(){
 		//Boolean at end to turn around and open it
-		Robot.drivetrain.tankDrive(0, turn);
-		Robot.drivetrain.tankDrive(speed, 0);
-		Robot.drivetrain.tankDrive(0, turn);
+		Robot.driveTrain.tankDrive(0, turn);
+		Robot.driveTrain.tankDrive(speed, 0);
+		Robot.driveTrain.tankDrive(0, turn);
 		//Open the door with movement?
-		Robot.drivetrain.tankDrive(speed, 0);
+		Robot.driveTrain.tankDrive(speed, 0);
 
 
 
 	}
 	protected void sallyport() {
 		//Boolean at end to turn around and open it
-				Robot.drivetrain.tankDrive(0, turn);
-				Robot.drivetrain.tankDrive(speed, 0);
-				Robot.drivetrain.tankDrive(0, turn);
+				Robot.driveTrain.tankDrive(0, turn);
+				Robot.driveTrain.tankDrive(speed, 0);
+				Robot.driveTrain.tankDrive(0, turn);
 				//Open the door with movement?
-				Robot.drivetrain.tankDrive(speed, 0);
+				Robot.driveTrain.tankDrive(speed, 0);
 
 	}
 	protected void rockwall() {
 //If the tank tread power mode thing is on the robot, trigger it
 		//charge
-		Robot.drivetrain.tankDrive(speed, 0);
+		Robot.driveTrain.tankDrive(speed, 0);
 
 	}
-	protected void roughterrain() {
+	protected void roughTerrain() {
 		//If the tank tread power mode thing is on the robot, trigger it
 				//charge
-		Robot.drivetrain.tankDrive(speed, 0);
+		Robot.driveTrain.tankDrive(speed, 0);
 	}
 	protected void lowbar() {
 		//If the tank tread lowbar mode thing is on the robot, trigger it
 		//charge carefully
-		Robot.drivetrain.tankDrive(speed*0.8685, 0);
+		Robot.driveTrain.tankDrive(speed*0.8685, 0);
 	}
-	protected void rotatetowardstower (int x){
+	protected void rotateTowardsTower (int x){
 		if (x == 1){
 			//rotate towards tower
 		}
@@ -149,7 +151,4 @@ int turn = 90;
 
 		}
 	}
-	
-	
-
 }
